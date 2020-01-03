@@ -48,4 +48,33 @@ end
 
 class BookInStock
 # YOUR CODE HERE
+# isbn
+# price
+def isbn  
+  @ISBN
+end
+
+def price
+  @price
+end
+
+def initialize(isbn, price)
+  raise ArgumentError if isbn.empty? || price <=0
+  @ISBN = isbn
+  @price = price
+end
+
+def isbn=(isbn) 
+    @ISBN = isbn 
+end
+
+def price=(price) 
+    @price = price 
+end
+
+
+def price_as_string
+  output = "%.2f" % price
+   "$#{output}"
+end
 end
